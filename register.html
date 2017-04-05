@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html>
 <head>
-    
+
     <!-- Latest compiled and minified CSS -->
     <link 
         rel="stylesheet" 
@@ -17,6 +17,14 @@
     
     <script 
         src="http://code.jquery.com/jquery-1.9.1.js">
+    </script>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js">
+    </script>
+            
+    <script 
+        src="js/yk.js">
     </script>
     
     <!-- Latest compiled and minified JavaScript -->
@@ -65,21 +73,21 @@
                     <!--Email input element starts -->
                     <div class="form-group col-md-6 col-sm-6">
                         <label for="email">Email*</label>
-                        <input name="email" type="email" class="form-control input-sm" id="email" placeholder="" required>
+                        <input name="email" value="f5f@msn.com" type="email" class="form-control input-sm" id="email" placeholder="" required>
                     </div>
                     <!--Email input element ends -->
                     <!-- #####################################################-->
                     <!--First name input element starts-->
                     <div class="form-group col-md-6 col-sm-6">
-                        <label for="FirstName">First Name*	</label>
-                        <input name="First_name" type="text" class="form-control input-sm" id="Fname" placeholder="" required>
+                        <label  for="FirstName">First Name*	</label>
+                        <input  value="khalid" name="First_name" type="text" class="form-control input-sm" id="Fname" placeholder="" required>
                     </div>
                     <!--First name input element ends-->
                     <!-- #####################################################-->
                     <!--Last name input element starts-->
                     <div class="form-group col-md-6 col-sm-6">
                         <label for="surname">Surname*	</label>
-                        <input name="Surname" type="text" class="form-control input-sm" id="surname" placeholder="" required>
+                        <input value="almutiri" name="Surname" type="text" class="form-control input-sm" id="surname" placeholder="" required>
                     </div>
                     <!-- Last name input element ends-->
                     <!-- #####################################################-->
@@ -88,10 +96,10 @@
                          <label for="mobile">Gender*</label>
                          <!-- radio button element starts-->
                          <div class="radio">
-                             <label><input type="radio" name="Gender" required>Male</label>
+                             <label><input type="radio" checked="true" value="male" name="Gender" required>Male</label>
                         </div>
                         <div class="radio">
-                            <label><input type="radio" name="Gender" required>Female</label>
+                            <label><input type="radio" name="Gender" value="female" required>Female</label>
                         </div>
                         <!-- radio button element starts-->
                     </div>
@@ -100,28 +108,28 @@
                     <!-- Specialty input element starts-->
                     <div class="form-group col-md-6 col-sm-6">
                         <label for="Specialty">Specialty*</label>
-                        <input name="Specialty" type="text" class="form-control input-sm" id="Specialty" placeholder="" required>
+                        <input name="Specialty" value="CS" type="text" class="form-control input-sm" id="Specialty" placeholder="" required>
                     </div>
                     <!-- Specialty input element ends--> 
                     <!-- #####################################################-->
                     <!-- Institution input element starts--> 
                     <div class="form-group col-md-6 col-sm-6">
                         <label for="Institution">Institution*</label>
-                        <input name="Institution" type="text" class="form-control input-sm" id="Institution" placeholder="" required>
+                        <input name="Institution" value="OC" type="text" class="form-control input-sm" id="Institution" placeholder="" required>
                     </div>
                     <!-- Institution input element ends--> 
                     <!-- #####################################################-->
                     <!-- City input element starts--> 
                     <div class="form-group col-md-6 col-sm-6">
                         <label for="City">City*</label>
-                        <input name="City" type="text" class="form-control input-sm" id="City" placeholder="" required>
+                        <input name="City" type="text" value="Riyadh" class="form-control input-sm" id="City" placeholder="" required>
                     </div>
                      <!-- City input element ends-->
                      <!-- #####################################################-->
                      <!-- Mobile Numbe input element starts-->
                     <div class="form-group col-md-6 col-sm-6">
                         <label for="MobileNumber">Mobile Number*</label>
-                        <input name="Mobile_Number" type="text" class="form-control input-sm" id="MobileNumber" placeholder="" required>
+                        <input name="Mobile_Number" value="0566666777" type="text" class="form-control input-sm" id="MobileNumber" placeholder="" required>
                     </div>
                     <!-- Mobile Numbe input element ends-->
                     <!-- #####################################################-->
@@ -138,41 +146,41 @@
                                 Please select the workshop session(s) you would like to register for (you may select more than one)
                             </label>
                         <div class="checkbox">
-                            <label><input type="checkbox" value="hwrp">
+                            <label><input type="checkbox" name='wshop' checked='true' value="hwrp">
                             15 April, How to Write a research proposal, Prof. Ahmed AlBarrak &
                              Dr. Fuad Alhosban & Dr. Samantha Ismaile</label>
                         </div>
                         <div class="checkbox">
-                            <label><input type="checkbox" value="mafsit">
+                            <label><input type="checkbox" name='wshop' checked='true' value="mafsit">
                             15 April, Change Management, Methodologies and Approaches for Successful IT-Healthcare, Mr Monief Eid.
                             </label>
                         </div>
                         <div class="checkbox ">
-                            <label><input type="checkbox" value="ppcchi" >15 April, The Power of Patient-Centered Care: 
+                            <label><input type="checkbox"  name='wshop' checked='true' value="ppcchi" >15 April, The Power of Patient-Centered Care: 
                             Consumer Health Informatics, Prof. Ahmed Albarrak, Ms. Nejoud AlKhashan.</label>
                         </div>
                         <div class="checkbox ">
-                            <label><input type="checkbox" value="iih" >16 April, Innovation in healthcare, Prof. Ahmed AlBarrak & 
+                            <label><input type="checkbox"  name='wshop' value="iih" >16 April, Innovation in healthcare, Prof. Ahmed AlBarrak & 
                             Dr. Mowafah Househ</label>
                         </div>
                         <div class="checkbox ">
-                            <label><input type="checkbox" value="aqrmhi" >16 April, Advancing Qualitative Research Methods in Health 
+                            <label><input type="checkbox"  name='wshop' value="aqrmhi" >16 April, Advancing Qualitative Research Methods in Health 
                             Informatics, Dr. Nasriah Zakaria, Dr. Samantha Ismile.</label>
                         </div>
                         <div class="checkbox ">
-                            <label><input type="checkbox" value="hisipco" >16 April, Healthcare Information System (HIS) Implementation 
+                            <label><input type="checkbox" name='wshop' value="hisipco" >16 April, Healthcare Information System (HIS) Implementation 
                             Plan Challenges and Obstacles, Mansour Al-Swaidan</label>
                         </div>
                         <div class="checkbox ">
-                            <label><input type="checkbox" value="chiefaw" >17 April, Consumer Health Informatics – Exploring Frontiers 
+                            <label><input type="checkbox" name='wshop' value="chiefaw" >17 April, Consumer Health Informatics – Exploring Frontiers 
                             in the Arab World, Dr. Mowafah Househ, Dr Luis Luque</label>
                         </div>
                         <div class="checkbox ">
-                            <label><input type="checkbox" value="dmcihc" >17 April, Development and Maintenance of Costing 
+                            <label><input type="checkbox" name='wshop' value="dmcihc" >17 April, Development and Maintenance of Costing 
                             Information in Health Care, Prof. Syed AlJunid.</label>
                         </div>
                         <div class="checkbox ">
-                            <label><input type="checkbox" value="iqase" >17 April, Introduction to Quantitative Analysis, SPSS & Ebi Info, Dr. 
+                            <label><input type="checkbox" name='wshop' value="iqase" >17 April, Introduction to Quantitative Analysis, SPSS & Ebi Info, Dr. 
                             Fuad Alhosban, Dr. Osama Abdulhay, Dr. Rana Saleh</label>
                         </div>
                             <span class="label label-info">Info</span>
@@ -185,7 +193,7 @@
                     <!-- amount paid input element starts-->
                     <div class="form-group col-md-6 col-sm-6">
                         <label for="amountPaid ">Amount Paid *</label>
-                        <input name="amount_Paid" type="text" class="form-control input-sm" id="amountPaid" placeholder="">
+                        <input value="123" name="amount_Paid" type="text" class="form-control input-sm" id="amountPaid" placeholder="">
                     </div> <!-- amount paid  input element ends-->
                     <br>
                     <br>
