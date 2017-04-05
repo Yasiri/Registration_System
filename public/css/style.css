@@ -1,0 +1,20 @@
+body {
+        /*background:white !important; */
+        background-image: url("../img/PosterTemplate.jpg");
+        background-color: #bbdefb;
+        background-size: cover;                      /* <------ */ 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+
+div.vertical-line{
+      width: 1px; /* Line width */
+      background-color: black; /* Line color */
+      height: 100%; /* Override in-line if you want specific height. */
+      float: left; /* Causes the line to float to left of content. 
+        You can instead use position:absolute or display:inline-block
+        if this fits better with your design */
+    }
+
+
