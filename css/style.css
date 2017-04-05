@@ -1,6 +1,6 @@
 body {
         /*background:white !important; */
-        background-image: url("img/PosterTemplate.jpg");
+        background-image: url("../img/PosterTemplate.jpg");
         background-color: #fbfbfb;
         background-size: cover;                      /* <------ */ 
         -webkit-background-size: cover;
@@ -16,3 +16,5 @@ div.vertical-line{
         You can instead use position:absolute or display:inline-block
         if this fits better with your design */
     }
+
+
