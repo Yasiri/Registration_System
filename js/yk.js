@@ -13,8 +13,11 @@ $(document).ready(function () {
         var data = Guest(inputs);
         // console.log(data);
         pushDate(data,'guests');
+        
+        //
+        
     });
-
+    
 });
 
 
@@ -61,7 +64,9 @@ function Guest(inputs) {
         mobile: getValue('Mobile_Number', inputs),
         paid:getValue("amount_Paid",inputs),
         wshops: getGroup('wshop', inputs)
+        
     };
+    console.log(" here vlaue 1");
 };
 
 // helpper function to search for input filed and return value;
@@ -79,6 +84,7 @@ function getValue(name, inputs) {
 // ** only used for workshops input since all of them have "wshop" name
 function getGroup(name, inputs) {
     return _.reduceRight(inputs, function (res, value, key) {
+        
         if (value.name == name)
             res.push(value.value);
         return res;
@@ -92,6 +98,8 @@ function pushDate(date,url){
     firebase.database().ref(url).push(date)
     .then(function(res){ // if date saved
         console.log("date pushed!");
+        // redirect to the badge page after saving data
+        window.location="printPadge.html";
     })
     .catch(function(err){ // if error
         console.log("PushDate:"+err);

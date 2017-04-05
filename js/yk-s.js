@@ -68,3 +68,9 @@ function fillGuest(guest){
 
     $("#wshops").val(workshops);
 }
+
+function RedirectStoR() 
+{
+    window.location="register.html";
+}
+
