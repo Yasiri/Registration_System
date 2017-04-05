@@ -1,7 +1,9 @@
 <!DOCTYPE html> 
 <html>
 <head>
-    
+     <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js">
+    </script>
     <!-- Latest compiled and minified CSS -->
     <link 
         rel="stylesheet" 
@@ -19,8 +21,10 @@
     <script 
         src="http://code.jquery.com/jquery-1.9.1.js">
     </script>
+
+
      <script 
-        src="js/yk.js">
+        src="js/yk-s.js">
     </script>
     
     <!-- Latest compiled and minified JavaScript -->
@@ -50,20 +54,22 @@
         <div class="panel-body">
             <div class="container col-md-10 col-sm-10">
                 <!-- form starts here -->
-                <form role="form" id='rForm'>
+                <!--<form  id='search'>-->
                     <!-- input elements starts  -->
                     <div class="form-group col-md-12 col-sm-12">
                         <!-- search element starts-->
                         <div class="form-group col-md-6 col-sm-6">
                             <label for="email">Please Enter Guest's Email*</label>
-                            <input type="email" class="form-control input-sm" id="search" placeholder="" required>
+                            <input type="email" class="form-control input-sm" id="term" placeholder="" required>
                             <br />
                         <!-- Trigger the modal with a button -->
-                        <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Submit</button>
+                        <!--<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Submit</button>-->
+                        <button type="button" class="btn btn-info btn-sm" onclick="search('email')"> Search By email </button>
+                           <button type="button" class="btn btn-info btn-sm" onclick="search('mobile')"> Search By mobile number </button>
                     </div> <!-- amount paid  input element ends-->
                 </div> 
                 <!-- input elements ends  -->
-            </form> 
+            <!--</form> -->
                 <!-- Modal -->
                 <!-- #####################################################-->
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -88,44 +94,44 @@
                             </div>
                             <div class="row col-md-6 ">
                                 <div class="form-group">
-                                        <label for="firstName" class="control-label col-sm-4">First Name:</label>
+                                        <label for="first_name" class="control-label col-sm-4">First Name:</label>
                                     <div class="form-control-static col-md-6">
-                                        <input type="text" class="form-control" id="Fname" style="background-color: white" readonly>
+                                        <input type="text" class="form-control" id="first_name" style="background-color: white" readonly>
                                     </div>
-                                        <label for="Surname" class="control-label col-sm-4">Surname:</label>
+                                        <label for="surname" class="control-label col-sm-4">Surname:</label>
                                     <div class="form-control-static col-md-6">
-                                        <input type="text" class="form-control" id="Surname" style="background-color: white" readonly>
+                                        <input type="text" class="form-control" id="surname" style="background-color: white" readonly>
                                     </div>
-                                        <label for="Gender" class="control-label col-sm-4">Gender:</label>
+                                        <label for="gender" class="control-label col-sm-4">Gender:</label>
                                     <div class="form-control-static col-sm-6">
-                                        <input type="text" class="form-control" id="Gender" style="background-color: white" readonly>
+                                        <input type="text" class="form-control" id="gender" style="background-color: white" readonly>
                                     </div>
-                                            <label for="City" class="control-label col-sm-4">City:</label>
+                                            <label for="city" class="control-label col-sm-4">City:</label>
                                     <div class="form-control-static col-sm-6">
-                                        <input type="text" class="form-control" id="City" style="background-color: white" readonly>
+                                        <input type="text" class="form-control" id="city" style="background-color: white" readonly>
                                     </div>
                                 </div>
                             </div>    
                             <div class="row col-md-6 ">
                             <div class="form-group">
-                                <label for="Specialty" class="control-label col-sm-4">Specialty:</label>
+                                <label for="specialty" class="control-label col-sm-4">Specialty:</label>
                                     <div class="form-control-static col-sm-6">
-                                       <input type="text" class="form-control" id="Specialty" style="background-color: white" readonly>
+                                       <input type="text" class="form-control" id="specialty" style="background-color: white" readonly>
                                      </div>
-                                        <label for="Institution" class="control-label col-sm-4">Institution:</label>
+                                        <label for="institution" class="control-label col-sm-4">Institution:</label>
                                     <div class="form-control-static col-sm-6">
-                                        <input type="text" class="form-control" id="Institution" style="background-color: white" readonly>
+                                        <input type="text" class="form-control" id="institution" style="background-color: white" readonly>
                                     </div>
-                                        <label for="MobileNumber" class="control-label col-sm-4">Mobile Number:</label>
+                                        <label for="mobile" class="control-label col-sm-4">Mobile Number:</label>
                                     <div class="form-control-static col-sm-6">
-                                        <input type="text" class="form-control" id="MobileNumber" style="background-color: white" readonly>
+                                        <input type="text" class="form-control" id="mobile" style="background-color: white" readonly>
                                     </div>
                                 </div>
                             </div>
                             <div class="row col-md-12">
                                 <div class="form-group">
-                                    <label for="comment">work shops:</label>
-                                        <textarea class="form-control" rows="5" id="comment" readonly style="background-color: white"></textarea>
+                                    <label for="wshops">work shops:</label>
+                                        <textarea class="form-control" rows="5" id="wshops" readonly style="background-color: white"></textarea>
                                 </div>
                             </div>
                         </div>
