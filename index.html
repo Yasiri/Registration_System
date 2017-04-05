@@ -1,0 +1,153 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link 
+        rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+        crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link 
+        rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" 
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" 
+        crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="/css/styl.css"  />
+    <script 
+        src="http://code.jquery.com/jquery-1.9.1.js">
+    </script>
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script 
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+        crossorigin="anonymous">
+    </script>
+
+    <!--############ style for the background ############# -->
+    <style type="text/css">
+         body { 
+             /*background:white !important; */
+            
+             background-image: url("img/PosterTemplate.jpg");
+             background-color: #fbfbfb;
+            background-size: cover;                      /* <------ */ 
+             -webkit-background-size: cover;
+             -moz-background-size: cover;
+             -o-background-size: cover;
+             } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+    </style>
+    
+    <title>
+    2nd International Saudi Health Informatics Conference (ISHIC 2017) المؤتمر الدولي السعودي الثاني في المعلوماتية الصحية
+    </title>
+</head>
+
+<body>
+    <div class="panel panel-info" style="margin:70px;">
+        <div class="page-header">
+            <h3 align="center">2nd International Saudi Health Informatics Conference (ISHIC 2017)<br> المؤتمر الدولي السعودي الثاني في المعلوماتية الصحية
+            </h3>
+        </div>
+      
+    <div class="panel-heading " style="background-color: #bbdefb">
+          <h3 class="panel-title">Search</h3>
+    </div>  
+        <div class="panel-body">
+            <div class="container col-md-10 col-sm-10">
+                <!-- form starts here -->
+                <form role="form">
+                    <!-- input elements starts  -->
+                    <div class="form-group col-md-12 col-sm-12">
+                        <!-- search element starts-->
+                        <div class="form-group col-md-6 col-sm-6">
+                            <label for="email">Please Enter Guest's Email*</label>
+                            <input type="email" class="form-control input-sm" id="search" placeholder="" required>
+                            <br />
+                        <!-- Trigger the modal with a button -->
+                        <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Submit</button>
+                    </div> <!-- amount paid  input element ends-->
+                </div> 
+                <!-- input elements ends  -->
+            </form> 
+                <!-- Modal -->
+                <!-- #####################################################-->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">   <!-- light blue color #bbdefb-->
+                    <div class="modal-header " style="background-color: #bbdefb">
+                        <h3 class="modal-title" id="exampleModalLongTitle">Guest Information</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- modal grid starts here -->
+                        <div class="container-fluid ">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="ID" class="control-label col-sm-3">ID:</label>
+                                    <label>1123</label>
+                                </div>
+                                <hr>
+                                <br>
+                            </div>
+                            <div class="row col-md-6 ">
+                                <div class="form-group">
+                                        <label for="firstName" class="control-label col-sm-4">First Name:</label>
+                                    <div class="form-control-static col-md-6">
+                                        <input type="text" class="form-control" id="Fname" style="background-color: white" readonly>
+                                    </div>
+                                        <label for="Surname" class="control-label col-sm-4">Surname:</label>
+                                    <div class="form-control-static col-md-6">
+                                        <input type="text" class="form-control" id="Surname" style="background-color: white" readonly>
+                                    </div>
+                                        <label for="Gender" class="control-label col-sm-4">Gender:</label>
+                                    <div class="form-control-static col-sm-6">
+                                        <input type="text" class="form-control" id="Gender" style="background-color: white" readonly>
+                                    </div>
+                                            <label for="City" class="control-label col-sm-4">City:</label>
+                                    <div class="form-control-static col-sm-6">
+                                        <input type="text" class="form-control" id="City" style="background-color: white" readonly>
+                                    </div>
+                                </div>
+                            </div>    
+                            <div class="row col-md-6 ">
+                            <div class="form-group">
+                                <label for="Specialty" class="control-label col-sm-4">Specialty:</label>
+                                    <div class="form-control-static col-sm-6">
+                                       <input type="text" class="form-control" id="Specialty" style="background-color: white" readonly>
+                                     </div>
+                                        <label for="Institution" class="control-label col-sm-4">Institution:</label>
+                                    <div class="form-control-static col-sm-6">
+                                        <input type="text" class="form-control" id="Institution" style="background-color: white" readonly>
+                                    </div>
+                                        <label for="MobileNumber" class="control-label col-sm-4">Mobile Number:</label>
+                                    <div class="form-control-static col-sm-6">
+                                        <input type="text" class="form-control" id="MobileNumber" style="background-color: white" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row col-md-12">
+                                <div class="form-group">
+                                    <label for="comment">work shops:</label>
+                                        <textarea class="form-control" rows="5" id="comment" readonly style="background-color: white"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- modal grid ends here -->
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-info btn-sm pull-left" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                </div>
+                </div>
+            <!-- form was ending here -->
+           </div>
+        </div>
+</body>
+</html>
