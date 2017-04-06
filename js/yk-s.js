@@ -1,3 +1,5 @@
+
+$(document).ready(function () { 
 // load firebase SDK
 $.getScript('https://www.gstatic.com/firebasejs/3.7.5/firebase.js', function () {
     // Initialize Firebase
@@ -26,6 +28,8 @@ $.getScript('https://www.gstatic.com/firebasejs/3.7.5/firebase.js', function () 
         });
 
 }); // end of getScript
+});
+
 
 
 // ---------

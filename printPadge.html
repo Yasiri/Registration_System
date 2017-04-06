@@ -9,14 +9,19 @@
     <title>
         2nd International Saudi Health Informatics Conference (ISHIC 2017) المؤتمر الدولي السعودي الثاني في المعلوماتية الصحية
     </title>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="./js/yk-s.js">
 
+    </script>
     <script src='./js/qr.js'> </script>
+    
+
 </head>
 
 <body>
 
 <svg  viewBox="0 0 595 420"  xmlns="http://www.w3.org/2000/svg">
- <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/    ?guest_id=-Kgx6rJDISBJo3fBsaeG -->
  <g>
   <title>background</title>
   <rect fill="#fff" id="canvas_background" height="422" width="597" y="-1" x="-1"/>
@@ -49,8 +54,16 @@
 </html>
 
 <script>
-    guest_id = window.location.search.slice(1);
+     var guest_id = window.location.search.slice(1);
     // firebase get guest
+    function getGuest(){
+
+        var ref = firebase.database().ref(guest_id);
+ref.orderByKey().equalTo(guest_id).on("child_added", function(snapshot) {
+  console.log(snapshot.key);
+  console.log('i was here');
+});
+    }
     // if dosnt exsist return err or msg
     // else 
     // 1 generate QR code baseed on : guest ID , workshops --> image
