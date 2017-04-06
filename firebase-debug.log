@@ -1,0 +1,14 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /Users/Khalid/.nvm/versions/node/v7.7.2/bin/node /Users/Khalid/.nvm/versions/node/v7.7.2/bin/firebase serve
+[debug] CLI Version:  3.5.0
+[debug] Platform:     darwin
+[debug] Node Version: v7.7.2
+[debug] Time:         Wed Apr 05 2017 22:05:40 GMT-0700 (PDT)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[info] Starting Firebase development server...
+[info] 
+[info] Project Directory: /Users/Khalid/projects/Registration_System
+[info] Public Directory: public
+[info] 
+[info] Server listening at: http://localhost:5000

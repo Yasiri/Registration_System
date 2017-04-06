@@ -98,9 +98,11 @@ function pushDate(date,url){
     firebase.database().ref(url).push(date)
     .then(function(res){ // if date saved
         console.log("date pushed!");
+        console.log(res.key);
         // redirect to the badge page after saving data
-        window.location="printPadge.html";
-    })
+
+        window.location="printPadge.html?"+res.key;
+    })  
     .catch(function(err){ // if error
         console.log("PushDate:"+err);
     })
