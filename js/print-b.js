@@ -26,7 +26,7 @@ $.getScript('https://www.gstatic.com/firebasejs/3.7.5/firebase.js', function () 
         .catch(function (error) { // if fail
             console.log("Auth: " + err.message);
         });
-
+  
 }); // end of getScript
 });
 
