@@ -10,15 +10,16 @@
         2nd International Saudi Health Informatics Conference (ISHIC 2017) المؤتمر الدولي السعودي الثاني في المعلوماتية الصحية
     </title>
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script src="./js/yk-s.js">
-
+    
     </script>
     <script src='./js/qr.js'> </script>
+    <script src='./js/print-b.js'> </script>
+
     
 
 </head>
 
-<body>
+<body onload="search()">
 
 <svg  viewBox="0 0 595 420"  xmlns="http://www.w3.org/2000/svg">
  <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/    ?guest_id=-Kgx6rJDISBJo3fBsaeG -->
@@ -52,29 +53,3 @@
 </svg>
 </body>
 </html>
-
-<script>
-     var guest_id = window.location.search.slice(1);
-    // firebase get guest
-    function getGuest(){
-
-        var ref = firebase.database().ref(guest_id);
-ref.orderByKey().equalTo(guest_id).on("child_added", function(snapshot) {
-  console.log(snapshot.key);
-  console.log('i was here');
-});
-    }
-    // if dosnt exsist return err or msg
-    // else 
-    // 1 generate QR code baseed on : guest ID , workshops --> image
-    // 2 fill the palce holders 
-    
-     // E.g fill text
-     document.getElementById("name").innerHTML = "khalid almutiri";
-     // E.g make QR code
-    const qr = new QRious({
-          value: '{id:12312312312323123123,wshops:[1,2,3]}'
-        });
-    // E.g fill Image with QR code
-    document.getElementById("qrcode").setAttributeNS('http://www.w3.org/1999/xlink','href',qr.toDataURL('image/jpeg'));         
-    </script>
