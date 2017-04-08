@@ -12,12 +12,35 @@ $(document).ready(function () {
         // console.log(inputs);
         var data = Guest(inputs);
         // console.log(data);
-        pushDate(data,'guests');
-        
-        //
-        
+        checkEmailExists(data.email)
+        .then(function(result){
+             //pushDate(data,'guests');
+        })
+        .catch(function(err){
+            alert(err);
+        })
     });
-    
+   $("#email").change(function(event){
+       console.log($(event.target).val());
+       $("#emailspan").removeClass();
+        checkEmailExists($(event.target).val())
+        .then(function(result){
+            $("#emailarea").removeClass("has-error has-success");
+            $("#emailarea").addClass("has-success");
+           
+            console.log(result);
+        })
+        .catch(function(err){
+             $("#emailarea").removeClass("has-error has-success");
+            $("#emailarea").addClass("has-error");
+           
+            
+            console.log(err);
+            alert("This email has been signed to "+ err.first_name+" "+ err.surname);
+            $(event.target).val("");
+            $(event.target).focus();
+        })
+   }) 
 });
 
 
@@ -66,14 +89,32 @@ function Guest(inputs) {
         wshops: getGroup('wshop', inputs)
         
     };
-    console.log(" here vlaue 1");
 };
 
+function checkEmailExists(email) {
+   return new Promise(function(resolve, reject){
+       var ref = firebase.database().ref("/guests").orderByChild("email").equalTo(email);
+    ref.once("value")
+  .then(function(guests) {     
+            //console.log(emailAdd+"ُ ُEach loop ===>"+myguest);
+           if(guests.val() == null)
+           resolve("Does not exists!!!");
+            guests.forEach(function(guest){
+                
+                reject(guest.val());
+            })  
+            
+  }).catch(function(err){
+            reject(err);
+        });
+   });// Promise
+    
+}
 // helpper function to search for input filed and return value;
 function getValue(name, inputs) {
     value = _.find(inputs, function (o) {
-        return o.name == name;
-    });
+         return o.name == name;
+     });
     if (value)
         return value.value;
     else
@@ -101,7 +142,7 @@ function pushDate(date,url){
         console.log(res.key);
         // redirect to the badge page after saving data
 
-        window.location="printPadge.html?"+res.key;
+window.location="printPadge.html?"+res.key;
     })  
     .catch(function(err){ // if error
         console.log("PushDate:"+err);
